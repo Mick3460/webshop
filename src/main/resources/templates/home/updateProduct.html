@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update siden</title>
+</head>
+<body>
+<div class="form-container">
+    <form action="/updateProduct" method="post">
+        <h3>Product info</h3>
+        <label>ID</label>
+        <input type="text" th:placeholder="${product.product_id}" name="product_id" th:value="${product.product_id}" readonly> <br>
+        <label>Name</label>
+        <input type="text" th:placeholder="${product.name}" name="name" th:value="${product.name}" > <br>
+        <label>Price</label>'
+        <input type="text" th:placeholder="${product.price}" name="price" th:value="${product.price}" > <br>
+
+        <input type="submit" value="Return">
+
+
+    </form>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeg hader html så inderligt</title>
+</head>
+<body>
+
+<h1>View all products</h1>
+
+<table class="tableClas">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr></thead>
+    <tbody>
+    <tr th:each="product: ${products}">
+        <td th:text="${product.product_id}"> </td>
+        <td th:text="${product.name}"> </td>
+        <td th:text="${product.price}"> </td>
+
+        <td><a th:href="@{'/inspectProductId='+${product.product_id}}">
+                <button>View</button>
+        </a></td>
+        <td><a th:href="@{'/updateProductId='+${product.product_id}}">
+                <button>Update</button>
+        </a></td>
+        <td><a th:href="@{'/deleteProductId='+${product.product_id}}">
+                <button>Delete</button>
+        </a></td>
+
+    </tr>
+    </tbody>
+</table>
+<a href="createProduct" methods="get">
+    <button>Create new product</button>
+</a>
+
+
+</body>
+</html>
